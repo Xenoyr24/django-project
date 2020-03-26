@@ -1,0 +1,465 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fom",
+				"formatted_total"
+			],
+			[
+				"checkout",
+				"checkout_home"
+			],
+			[
+				"shipp",
+				"shipping_total"
+			],
+			[
+				"cart",
+				"cart_total"
+			],
+			[
+				"post_",
+				"post_save_cart_total"
+			],
+			[
+				"pre_",
+				"pre_save_create_order_id"
+			],
+			[
+				"order_",
+				"order_new_id"
+			],
+			[
+				"random",
+				"random_string_generator"
+			],
+			[
+				"pro",
+				"product_obj"
+			],
+			[
+				"prodc",
+				"product_obj"
+			],
+			[
+				"col-",
+				"col-md-6"
+			],
+			[
+				"card",
+				"card_obj"
+			],
+			[
+				"contact",
+				"contact_url"
+			],
+			[
+				"unique",
+				"unique_slug_generator"
+			],
+			[
+				"Produ",
+				"ProductAdmin"
+			],
+			[
+				"Product",
+				"ProductQuerySet"
+			],
+			[
+				"Pro",
+				"Product"
+			],
+			[
+				"does",
+				"DoesNotExist"
+			],
+			[
+				"upload",
+				"upload_image_path"
+			],
+			[
+				"base",
+				"base_name"
+			],
+			[
+				"get_",
+				"get_object_or_404"
+			],
+			[
+				"as",
+				"as_view"
+			],
+			[
+				"procu",
+				"ProductListView"
+			],
+			[
+				"get",
+				"get_user_model"
+			],
+			[
+				"is_",
+				"is_authenticated"
+			],
+			[
+				"reu",
+				"request"
+			],
+			[
+				"Contact",
+				"ContactForm"
+			],
+			[
+				"render",
+				"render_to_reponse"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "settings.py",
+			"settings":
+			{
+				"buffer_size": 3099,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wsgi.py",
+			"settings":
+			{
+				"buffer_size": 396,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Xen_home/Desktop/Dev/devdjango/src/manage.py",
+			"settings":
+			{
+				"buffer_size": 253,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Xen_home/Desktop/Dev",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/static_cdn",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/static_cdn/static_root",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/static_cdn/static_root/img"
+	],
+	"file_history":
+	[
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/base/navbar.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/views.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/models.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/checkout/models.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/templates/carts/home.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/templates/carts/checkout.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/urls.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/search/views.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/devdjango/utils.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/models.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/devdjango/settings.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/checkout/admin.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/tags/models.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/base/css.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/contact/view.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/templates/products/snippets/update-cart.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/templates/products/detail.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/views.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/devdjango/urls.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/__init__.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/devdjango/views.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/tags/admin.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/tags/tests.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/utils.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/carts/admin.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/home_page.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/search/templates/search/snippets/search-form.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/search/urls.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/search/templates/search/view.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/search/snippets/search-form.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/base/js.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/base.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/bootstrap/example.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/auth/login.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/templates/auth/register.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/templates/products/list.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/templates/products/snippets/card.html",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/urls.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/admin.py",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/products/templates/products/featured-detail.html",
+		"/C/Users/Xen_home/Desktop/file.rb",
+		"/C/Program Files/Sublime Text 3/%*",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/static_my_proj/css/main.css",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/devdjango/forms.py",
+		"/C/Users/Xen_home/Desktop/beach.webp",
+		"/C/Users/Xen_home/Desktop/Dev/devdjango/src/devdjango/devdjango.sublime-project",
+		"/C/Users/Xen_home/mysite/myapp/views.py",
+		"/C/Users/Xen_home/mysite/mysite/urls.py",
+		"/C/Users/Xen_home/mysite/mysite/settings.py"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"shipping",
+			"justin",
+			"\")),\n",
+			"products_product.active"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3099,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wsgi.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Xen_home/Desktop/Dev/devdjango/src/manage.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "devdjango.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		]
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 395.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

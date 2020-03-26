@@ -1,0 +1,486 @@
+{% extends "base.html" %}
+{% load static %}
+
+<title>Homepage Template</title>
+
+{% block base_head %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+/* <Cards>  */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4b9126;
+    border-color:  #4b9126;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color:  #4b9126;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside, .image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside, .image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card, .backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #4b9126 !important;
+}
+
+.frontside .card .card-title, .backside .card .card-title {
+    color: #4b9126 !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+
+
+/* parallax */
+
+.zooming-bg{
+    width: 100vw;
+    height: calc(75vh - 6px);
+    background: url('/static/parallax/testimonials/zooming-bg.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    border-top: 2px solid #62C730;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.zooming-bg img{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: -10%;
+    margin: auto;
+}
+.content-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    max-width: 1200px;
+    padding: 40px 0px;
+}
+.content-part h1{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #eb7893;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part h2{
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part p{
+    font-family: "Open Sans";
+    font-size: 15px;
+    color: #777777;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px;
+    line-height: 24px;
+}
+.parallax-bottom-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: url('/static/parallax/testimonials/background-tool.jpg');
+    background-position: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 30px 0px;
+    text-align: center;
+
+}
+.parallax-bottom-part p{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.parallax-bottom-part img{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* stars */
+
+.checked {
+  color: orange;
+}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="zooming-bg">
+
+  <img src="{% static 'parallax/titles/testimonial.png' %}">
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+
+<section id="team" class="pb-5">
+    <div class="container">
+
+<div class="row">
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="{% static 'parallax/testimonials/testimonial01.png' %}" alt="card image"></p>
+                        <h4 class="card-title">Kate L.</h4>
+                        <p class="card-text">Location: Beau-Bassin</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+
+                        
+                    </div>
+                </div>
+        </div>
+            <div class="backside">
+            <div class="card">
+            <div class="card-body text-center mt-4">
+                <h4 class="card-title">Kate L.</h4>
+                <p class="card-text">"I sublet my home for a year to someone while my husband and I were living abroad. The tenant had two small dogs and smoked in our backyard and didn't clean up after the dogs or himself! I called several landscapers in the area to come and give me an estimate to restore my backyard to what it had once been."</p>
+
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class="img-fluid" src="{% static 'parallax/testimonials/testimonial02.png' %}" alt="card image"></p>
+                        <h4 class="card-title">Steve C.</h4>
+                        <p class="card-text">Location: Rose-hill</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        
+                    </div>
+                </div>
+        </div>
+            <div class="backside">
+            <div class="card">
+            <div class="card-body text-center mt-4">
+                <h4 class="card-title">Steve C.</h4>
+                <p class="card-text">"Paul and his crew did a solid job! They take their time and make sure the customer is getting what they want. We were very pleased with the efforts and final product that MostlyPlants Services put forth. The crew showed up on time and worked a full day. All in all a good experience. We anticipate using MostlyPlants on the next project!"</p>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="{% static 'parallax/testimonials/testimonial03.png' %}" alt="card image"></p>
+                        <h4 class="card-title">Sharmila C.</h4>
+                        <p class="card-text">Location: Mahebourg</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        
+                    </div>
+                </div>
+        </div>
+            <div class="backside">
+            <div class="card">
+            <div class="card-body text-center mt-4">
+                <h4 class="card-title">Sharmila C.</h4>
+                <p class="card-text">"My husband and I just moved into our house and we wanted to totally redo our front yard, which included putting in grass. I found MostlyPlants Gardening Services website and was impressed with the great reviews. Paul and his team came by to give us an estimate and upon meeting Paul, we knew that he "knew his stuff"."</p>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="{% static 'parallax/testimonials/testimonial04.jpg' %}" alt="card image"></p>
+                        <h4 class="card-title">Justin W.</h4>
+                        <p class="card-text">Location: Albion</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        
+                    </div>
+                </div>
+        </div>
+            <div class="backside">
+            <div class="card">
+            <div class="card-body text-center mt-4">
+                <h4 class="card-title">Justin W.</h4>
+                <p class="card-text">"I can't say enough about Paul and his guys, except, hire them :). You won't be sorry.
+					The quote was very fair, and only changed with added requests that I made. First, what I look for is dependability (there's nothing worse than wondering if someone is going to show up)."</p>
+
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="{% static 'parallax/testimonials/testimonial05.png' %}"alt="card image"></p>
+                        <h4 class="card-title">Oxford C.</h4>
+                        <p class="card-text">Location: Terre Rouge</p>
+
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        
+                    </div>
+                </div>
+        </div>
+            <div class="backside">
+            <div class="card">
+            <div class="card-body text-center mt-4">
+                <h4 class="card-title">Oxford C.</h4>
+                <p class="card-text">"They were punctual, polite, neat and tidy and very friendly. I would have no hesitations in recommending them to others.”</p>
+
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="{% static 'parallax/testimonials/testimonial06.jpg' %}" alt="card image"></p>
+                        <h4 class="card-title">The Crews family</h4>
+                        <p class="card-text">Location: Vacoas</p>
+
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                    </div>
+                </div>
+        </div>
+            <div class="backside">
+            <div class="card">
+            <div class="card-body text-center mt-4">
+                <h4 class="card-title">The Crews family</h4>
+                <p class="card-text">“Apologies for the delay in sending our thanks for such an amazing transformation of our garden - as we leave for work in the dark and return home in the dark, we only got to see it properly this morning! It looks amazing and we are very grateful for all your hard work! Can you also thank all the men who worked so hard to transform it.”  </p>
+
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+ </div>
+
+ </div>
+</div>
+</section>
+
+
+<br><br><br><br><br><br>
+
+<div class="parallax-bottom-part">
+  <p>Please Try our Free Estimation Tool</p>
+  <img src="{% static 'parallax/testimonials/tool.jpg' %}" alt="btn">
+</div>
+
+
+<br><br><br><br><br><br>
+
+
+
+<script type="text/javascript">
+  $(window).scroll(function(){
+   var sPos = $(this).scrollTop();
+   $(".zooming-bg").css({
+     'background-size' : 100 + sPos + '%'
+   });
+  });
+</script>
+
+{% endblock %}

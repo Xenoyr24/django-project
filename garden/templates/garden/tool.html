@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base_head %}
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+
+
+<style>
+.input{width: 80px; padding-left: 5px}
+.card{width: 600px}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<br><br><br>
+
+<div class="container text-center">
+    <div class="row">
+        <div class='col-12 col-lg-4  mr-auto order-2'>
+                
+            <div class="card1 text-center mr-auto">
+                 <div class="card-header">
+                     <form class="inline-form">
+            
+                    <label class="mr-2 font-weight-bold">Length Converter</label>
+
+                      </form>
+            
+                </div>
+            </div>
+            
+
+
+               <div class="card-body text-left mt-3">
+               
+                 
+                     <p>
+                         <label>Cm</label>
+                         <input id="inputCm" type="number" placeholder="Centimeters" oninput="LengthConverterCm(this.value)" onchange="LengthConverterCm(this.value)">
+                         
+                     </p>
+                     <P> Feet: <span id="outputFeetCm"></span> </P>
+                    
+                     <p>
+                         <label>Inches</label>
+                         <input id="inputFeet" type="number" placeholder="Inches" oninput="LengthConverterInches(this.value)" onchange="LengthConverterInches(this.value)">
+                         
+                     </p>
+                     <p> Feet: <span id="outputInches"></span> </p>
+                     
+         
+                    <p>
+                         <label>Kilometers</label>
+                         <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="LengthConverterKm(this.value)" onchange="LengthConverterKm(this.value)">
+                          
+                    </p>
+                    <p> Feet: <span id="outputFeetKm"></span> </p>
+                
+            
+
+       
+
+                </div>
+                
+        </div>
+
+   
+    
+
+    <div class='col-11 col-xl-8 ml-auto order-6' >
+    
+
+    <h2 class="mb-4">Area of your garden</h2>
+    <form id="startForm">
+        <div class="form-group">
+            <label>What is the length of the garden in feet?</label>
+            <input type="number" class="input" id="lengthInput" name="" step="any" min="0" oninput="validity.valid||(value='');">
+        </div>
+        <div class="form-group">
+            <label>What is the width of the garden in feet?</label>
+            <input type="number" class="input" id="widthInput" name="" step="any" min="0" oninput="validity.valid||(value='');">
+        </div>  
+    </form>
+    <button class="btn btn-primary" id="inputBtn">Calculate</button>
+    <div class="card text-center mx-auto">
+        <div class="card-header">
+            <form class="inline-form">
+                <label class="mr-2 font-weight-bold">Length:</label>
+                <input type="number" class="input" id="lengthChange" value="" name="" step="any" min="0" oninput="validity.valid||(value='');">
+                <span class="ml-2">feet</span>
+                <span class="ml-2 mr-2 font-weight-bold">X</span>
+                <label class="mr-2 font-weight-bold">Width:</label>
+                <input type="number" class="input" id="widthChange" name="" step="any" min="0" oninput="validity.valid||(value='');">
+                <span class="ml-2">feet</span>
+            </form>
+        </div>
+        <div class="card-body text-left mt-3">
+            <dl class="row">
+                <dt class="col-sm-5 pl-5">The area is</dt>
+                <dd class="col-sm-7"><span id="squareFeet" class="font-weight-bold"></span> square feet</dd>
+                <dd class="col-sm-7 offset-sm-5"><span id="squareMeters" class="font-weight-bold"></span> square meters</dd>
+            </dl>
+                <dl class="row">
+                <dt class="col-sm-5 pl-5">Maintenance price is</dt>
+                <dd class="col-sm-7">Rs <span id="price" class="font-weight-bold"></span></dd>
+            </dl>
+        </div>
+    </div>
+
+        
+    </div>
+  </div>
+</div>
+
+
+<br><br><br>
+
+      <div class="text-2">
+        <P>*please note that this is just an estimate and that the real price will be when our team will make an assessment of your garden on site</P>
+      </div>
+
+
+
+
+<script> 
+$(function(){
+    $('.card').hide();
+    const pri = 10;
+    const squ = 0.09290304; //squareMeterPerSquareFoot
+    var newLength = function(a){return $('#lengthChange').val(a)};
+    var newWidth = function(a){return $('#widthChange').val(a)};
+    var convert = function(a){return parseFloat(a.val());};
+    var inFeet = function(a, b){return a * b};
+    inMeters = sqrF => Number((sqrF * squ).toFixed(1));
+    inFeters = sqrF => Number((sqrF * 5).toFixed(1));
+    $('#inputBtn').click(function(){
+        $('#startForm').hide();
+        $('.card').show();
+        lengthA = convert($('#lengthInput'));
+        widthA = convert($('#widthInput'));
+        newLength(lengthA);
+        newWidth(widthA);
+        areaFeet = inFeet(lengthA, widthA);
+        $('#squareFeet').text(areaFeet);
+        $('#squareMeters').text(inMeters(areaFeet));
+        $('#price').text(inFeters(areaFeet));
+        $(this).hide();
+    });
+    var changeArea = function(){
+        lengthA = convert($('#lengthChange'));
+        widthA = convert($('#widthChange'));
+        areaFeet = inFeet(lengthA, widthA);
+        $('#squareFeet').text(areaFeet);
+        $('#squareMeters').text(inMeters(areaFeet));
+        $('#price').text(inFeters(areaFeet));
+    };
+
+     $('#lengthChange').on('input', function(){
+        return changeArea();
+      });
+     $('#widthChange').on('input', function(){
+        return changeArea();
+      });
+
+
+    
+});
+
+</script>
+
+<script>
+function LengthConverterCm(valNum) {
+  document.getElementById("outputFeetCm").innerHTML=valNum*0.032808;
+}
+
+function LengthConverterKm(valNum) {
+  document.getElementById("outputFeetKm").innerHTML=valNum*3280.8;
+}
+
+function LengthConverterInches(valNum) {
+  document.getElementById("outputInches").innerHTML=valNum*12;
+}
+
+</script>
+
+{% endblock %}
+
+
+
+

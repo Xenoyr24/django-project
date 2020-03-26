@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% load static %}
+
+<title>Homepage Template</title>
+
+{% block base_head %}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* parallax */
+
+.zooming-bg{
+    width: 100vw;
+    height: calc(75vh - 6px);
+    background: url('/static/parallax/testimonials/zooming-bg.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    border-top: 2px solid #62C730;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.zooming-bg img{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: -10%;
+    margin: auto;
+}
+.content-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    max-width: 1200px;
+    padding: 40px 0px;
+}
+.content-part h1{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #eb7893;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part h2{
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part p{
+    font-family: "Open Sans";
+    font-size: 15px;
+    color: #777777;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px;
+    line-height: 24px;
+}
+.parallax-bottom-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: url('/static/parallax/testimonials/background-tool.jpg');
+    background-position: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 30px 0px;
+    text-align: center;
+
+}
+.parallax-bottom-part p{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.parallax-bottom-part img{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* services */
+
+
+.h22s{
+    color: #4b9126;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ulls{
+    padding: 0;
+    margin: 0;
+
+    padding-bottom: 30px;
+    list-style-type: square;
+}
+.lils{
+    font-family: 'Open Sans';
+    padding: 5px;
+    margin: 0;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+<div class="zooming-bg">
+
+  <img src="{% static 'parallax/titles/ourservices.png' %}">
+</div>
+</div>
+
+
+<br><br><br><br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="h22s">Maintenance</h2>
+                    <ul class="ulls">
+                      <li class="lils">Pruning</li>
+                      <li class="lils">Mowing / Edging</li>
+                      <li class="lils">Weed Abatement</li>
+                      <li class="lils">Fertilization</li>
+                      <li class="lils">Pest Control</li>
+                      <li class="lils">Litter Removal</li>
+                      <li class="lils">Weekly or Monthly Service</li>
+
+                    </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="h22s">Irrigation</h2>
+                    <ul class="ulls">
+                      <li class="lils">Expert Technicians</li>
+                      <li class="lils">Diagnostic Evaluations</li>
+                      <li class="lils">Troubleshooting</li>
+                      <li class="lils">Repair</li>
+                      <li class="lils">Renovations</li>
+                      <li class="lils">Controller Programming</li>
+                    </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="h22s">Installation</h2>
+                    <ul class="ulls">
+                      <li class="lils">Planting</li>
+                      <li class="lils">Sod / Seed Lawns</li>
+                      <li class="lils">Drainage</li>
+                      <li class="lils">Irrigation</li>
+                      <li class="lils">Hard Scape</li>
+                    </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="h22s">Other</h2>
+                    <ul class="ulls">
+                      <li class="lils">Annual Color Design and Installation </li>
+                      <li class="lils">Property Clean-ups</li>
+                      <li class="lils">Mulching</li>
+                      <li class="lils">24 Hour Emergency Service</li>
+                    </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+<br><br><br><br><br>
+
+<!--Parallax script -->
+<script type="text/javascript">
+  $(window).scroll(function(){
+   var sPos = $(this).scrollTop();
+   $(".zooming-bg").css({
+     'background-size' : 100 + sPos + '%'
+   });
+  });
+</script>
+
+
+
+
+{% endblock %}

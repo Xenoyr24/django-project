@@ -1,0 +1,126 @@
+{% url 'home' as home_url %}
+{% url 'contact' as contact_url %}
+{% url 'products:list' as products_list_url %}
+{% url 'login' as login_url %}
+{% url 'logout' as logout_url %}
+{% url 'register' as register_url %}
+{% url 'cart:home' as cart_url %}
+
+{% url 'profile' as profile %}
+{% url 'profile/edit/' as edit_profile %}
+
+{% url 'orders:list' as orders_list %}
+
+{% url 'about' as about_url %}
+{% url 'logout' as logout_url %}
+{% url 'testimonial' as testimonial_url %}
+{% url 'services' as services_url %}
+{% url 'gallery' as gallery_url %}
+
+{% load static %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;" >
+ 
+
+  <a class="navbar-brand" href="{{ home_url }}">
+    <img src="{% static 'img/logo.png' %}" width="170" height="30" class="d-inline-block align-center" alt="">
+  </a>
+
+    <a class="navbar-brand">
+    {% include 'search/snippets/search-form.html' %} 
+    </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item {% if request.path == home_url %} active {% endif %}">
+        <a class="nav-link" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+
+    {% if request.user.is_authenticated %}
+     <li class="nav-item dropdown">     
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <img class="d-inline-block align-center" src="{{ user.profile.image.url }}" width="40" height="30" alt="Profile">
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+          <a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Profile</a>
+          <a class="dropdown-item" href="{{ orders_list }}">View Orders</a>
+          
+        <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
+          
+          
+        </div>
+       {% else %}
+       <li class="nav-item {% if request.path == register_url %} active {% endif %}">
+          <a class="nav-link" href="{{ register_url }}">Register</a>
+       </li>
+       <li class="nav-item {% if request.path == login_url %} active {% endif %}">
+          <a class="nav-link" href="{{ login_url }}">Login </a>
+      </li>
+      <li class="nav-item {% if request.path == profile_url %} active {% endif %}">
+          <a class="nav-link" href="/login/?next=/profile/">Profile </a>
+      </li>
+    </li>
+      {% endif %}
+
+
+       <li class="nav-item dropdown">     
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Company
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ contact_url }}">Contact us</a>
+            <a class="dropdown-item" href="{{ about_url }}">About us</a>
+            <a class="dropdown-item" href="{{ services_url }}">Services</a>
+            <a class="dropdown-item" href="{{ testimonial_url }}">Testimonials</a>
+            <a class="dropdown-item" href="{{ gallery_url }}">Gallery</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item {% if request.path == products_list_url %} active {% endif %}">
+        <a class="nav-link" href="{{ products_list_url }}">Products </a>
+      </li>
+
+
+
+      <li class="nav-item {% if request.path == cart_url %} active {% endif %}">
+          <a class="nav-link" href="{{ cart_url }}"> {{ request.session.cart_items }} <i class="fa fa-shopping-cart" aria-hidden="true"></i> </a>
+      </li>
+
+     </ul>
+</div>
+
+</nav>
+
+
+
+
+ 
+
+     
+
+<!--<li class="nav-item {% if request.path == logout_url %} active {% endif %}"> -->
+
+
+         <!-- <li class="nav-item dropdown">
+          <div class='col-12 col-sm-12 col-md-6 col-lg-4 ml-left'>
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+

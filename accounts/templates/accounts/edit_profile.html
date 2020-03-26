@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block base_head %}
+<title>Profile</title>
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Profile Info</legend>
+
+
+                          {% if messages %}
+                            <ul class="messages">
+                           {% for message in messages %}
+                             <li class="{{ message.tags }}">{{ message }}</li>
+                          {% endfor %}
+                            </ul>
+                          {% endif %}
+
+				{{ user_form.as_p }}
+ 				{{ profile_form.as_p }}
+        <legend class="border-bottom mb-4">Password</legend>
+        {{ pass_form.as_p }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-success" type="submit">Update</button>
+          </div>
+      </form>
+    </div>
+<br><br><br><br><br>
+
+
+{% endblock %}

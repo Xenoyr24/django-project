@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% load static %}
+
+<title>Homepage Template</title>
+
+{% block base_head %}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* parallax */
+
+.zooming-bg{
+    width: 100vw;
+    height: calc(75vh - 6px);
+    background: url('/static/parallax/testimonials/zooming-bg.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    border-top: 2px solid #62C730;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.zooming-bg img{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: -10%;
+    margin: auto;
+}
+.content-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    max-width: 1200px;
+    padding: 40px 0px;
+}
+.content-part h1{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #eb7893;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part h2{
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part p{
+    font-family: "Open Sans";
+    font-size: 15px;
+    color: #777777;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px;
+    line-height: 24px;
+}
+.parallax-bottom-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: url('/static/parallax/testimonials/background-tool.jpg');
+    background-position: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 30px 0px;
+    text-align: center;
+
+}
+.parallax-bottom-part p{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.parallax-bottom-part img{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* About us */
+.h22a{
+    color: #4b9126;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ulls{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 30px;
+    list-style-type: none;
+}
+
+.lils{
+    font-family: 'Open Sans';
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+<div class="zooming-bg">
+
+  <img src="{% static 'parallax/titles/aboutus.png' %}">
+</div>
+</div>
+
+
+<br><br><br><br><br>
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="h22a">Welcome to our site Mostly Plants Garden Services Inc !</h2>
+                    <ul class="ulls">
+                      <li class="lils">JDH Garden Services was founded in the year 2004 by Jose Dolores Henriquez. The company has been growing at a steadily pace since its inception. JDH Garden Services is a company that takes pride in its work Our jobs will always get done right and with the utmost case. This is our commitment to you. We are currently seeking customers for our numerous services we provide, but also customers that have deep appreciation for their home and gardens. Feel free to contact us and one of our professional representative will assist you in a timely manner. 
+					  </li>
+                    </ul>
+            </div>
+           	<div class="col-md-6">
+                <h2 class="h22a">The Team</h2>
+                    <ul class="ulls">
+                      	<li class="lils">Paul  is supported by skilled teams of landscapers, whose work always reflects his exacting standards. The teams are in the extremely capable hands of Manager, Matt, who supervises the teams on site and ensures everything runs smoothly. 
+                      	The project will not be signed-off until Pual has walked round the garden with his client and made sure they are completely satisfied with the work carried out.</li>
+                    </ul>
+            </div>
+
+    	</div>
+
+   			<div class="row">
+	        	<div class="col-md-6">
+                <h2 class="h22a">We ensure 100% customer satisfaction on all of our garden & landscaping services.</h2>
+                    <ul class="ulls">
+                      	<li class="lils">Two words best describe the work that we do: Passion and Commitment. Our committed craftsmen will provide you with a professional work environment during the construction and maintenance of your project. Our ability to serve you will be seen by the results we deliver. Thank you for visiting our site</li>
+                    </ul>
+        	</div>
+
+        </div>
+    </div>
+
+
+
+
+
+<br><br><br><br><br>
+
+<!--Parallax script -->
+<script type="text/javascript">
+  $(window).scroll(function(){
+   var sPos = $(this).scrollTop();
+   $(".zooming-bg").css({
+     'background-size' : 100 + sPos + '%'
+   });
+  });
+</script>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,353 @@
+{% extends "base.html" %}
+{% load static %}
+
+<title>Homepage Template</title>
+
+{% block base_head %}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* parallax */
+
+.zooming-bg{
+    width: 100vw;
+    height: calc(75vh - 6px);
+    background: url('/static/parallax/testimonials/zooming-bg.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    border-top: 2px solid #62C730;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.zooming-bg img{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: -10%;
+    margin: auto;
+}
+.content-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    max-width: 1200px;
+    padding: 40px 0px;
+}
+.content-part h1{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #eb7893;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part h2{
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.content-part p{
+    font-family: "Open Sans";
+    font-size: 15px;
+    color: #777777;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px;
+    line-height: 24px;
+}
+.parallax-bottom-part{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: url('/static/parallax/testimonials/background-tool.jpg');
+    background-position: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 30px 0px;
+    text-align: center;
+
+}
+.parallax-bottom-part p{
+    font-family: "Open Sans";
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.parallax-bottom-part img{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* gallery */
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+<div class="zooming-bg">
+
+  <img src="{% static 'parallax/titles/ourgallery.png' %}">
+</div>
+</div>
+
+
+<br><br><br><br><br>
+
+ <div class="text-1">our Gallery</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery1.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery1.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery2.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery2.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery3.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery3.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery4.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery4.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery5.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery5.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery6.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery6.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery7.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery7.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery8.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery8.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br><br>
+
+<!--Parallax script -->
+<script type="text/javascript">
+  $(window).scroll(function(){
+   var sPos = $(this).scrollTop();
+   $(".zooming-bg").css({
+     'background-size' : 100 + sPos + '%'
+   });
+  });
+</script>
+
+<!--Gallery script -->
+<script>
+let modalId = $('#image-gallery');
+
+$(document)
+  .ready(function () {
+
+    loadGallery(true, 'a.thumbnail');
+
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current) {
+      $('#show-previous-image, #show-next-image')
+        .show();
+      if (counter_max === counter_current) {
+        $('#show-next-image')
+          .hide();
+      } else if (counter_current === 1) {
+        $('#show-previous-image')
+          .hide();
+      }
+    }
+
+
+    function loadGallery(setIDs, setClickAttr) {
+      let current_image,
+        selector,
+        counter = 0;
+
+      $('#show-next-image, #show-previous-image')
+        .click(function () {
+          if ($(this)
+            .attr('id') === 'show-previous-image') {
+            current_image--;
+          } else {
+            current_image++;
+          }
+
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+        });
+
+      function updateGallery(selector) {
+        let $sel = selector;
+        current_image = $sel.data('image-id');
+        $('#image-gallery-title')
+          .text($sel.data('title'));
+        $('#image-gallery-image')
+          .attr('src', $sel.data('image'));
+        disableButtons(counter, $sel.data('image-id'));
+      }
+
+      if (setIDs == true) {
+        $('[data-image-id]')
+          .each(function () {
+            counter++;
+            $(this)
+              .attr('data-image-id', counter);
+          });
+      }
+      $(setClickAttr)
+        .on('click', function () {
+          updateGallery($(this));
+        });
+    }
+  });
+
+// build key actions
+$(document)
+  .keydown(function (e) {
+    switch (e.which) {
+      case 37: // left
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+          $('#show-previous-image')
+            .click();
+        }
+        break;
+
+      case 39: // right
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+          $('#show-next-image')
+            .click();
+        }
+        break;
+
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
+</script>
+
+
+{% endblock %}

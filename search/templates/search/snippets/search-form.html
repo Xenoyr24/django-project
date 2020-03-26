@@ -1,0 +1,17 @@
+<form method='GET' action='{% url "search:query" %}'>
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="searchbar">
+      <input class="search_input" type="text" name='q' placeholder="Search..." value='{{ request.GET.q }}'>
+     <button type="submit" class="search_icon" ><i class="fa fa-search" ></i>
+      </button>
+      
+    </div>
+  </div>
+</div>
+</form>
+
+
+
+
+

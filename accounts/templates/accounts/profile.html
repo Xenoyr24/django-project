@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+    
+{% block content %}
+
+<br><br><br>
+
+<img class="rounded-circle account-img" src="{{ user.profile.image.url }}" width="200" height="200">
+
+
+<ul>
+  <h2> {{ user.get_full_name }}</h2> 
+  <li>Username: {{ user.username  }}</li>
+  <li>Email: {{ user.email }}</li>
+  <li>Birth Date: {{ user.profile.birth_date }}</li>
+  <li>other names: {{ user.profile.other_name }}</li>
+  <li>District: {{ user.profile.district }}</li>
+  <li>Phone: {{ user.profile.phone}}</li>
+  <li>Bio: {{ user.profile.bio }}</li>
+</ul>
+
+
+<br><br><br><br><br>
+     
+{% endblock %}
+
+<!--
+<h2>{{ user.get_full_name }}</h2>
+<ul>
+  <li>Username: {{ user.username  }}</li>
+  <li>Location: {{ user.profile.location }}</li>
+  <li>Birth Date: {{ user.profile.birth_date }}</li>
+  <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+</ul> -->

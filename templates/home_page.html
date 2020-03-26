@@ -1,0 +1,560 @@
+{% extends "basehome.html" %}
+{% load static %}
+
+
+
+
+
+<title>Homepage</title>
+
+{% block base_head %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<style>
+
+body{
+ background-image: url('/static/img/background.png');
+  background-attachment: fixed; 
+}
+
+/* Garden */
+.text-1{
+font-family: Book Antiqua;
+text-align: center;
+font-size: 45px;
+line-height: 72px;
+font-weight: 700;
+text-transform: uppercase;
+color: #4b9126;
+}
+
+.text-2{
+    color: #000;
+    font-family:  Book Antiqua, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    text-align: center;
+}
+
+.btn{
+width:200px;
+font-weight: bold;
+font-size: 20px;
+    
+}
+
+
+
+/* Parallax */
+.parallax-bottom-part{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url('/static/parallax/testimonials/landscape.jpg');
+    background-position: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 30px 0px;
+    text-align: center;
+
+}
+.parallax-bottom-part p{
+    font-family: "Verdana";
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    line-height: 600px;
+    text-transform: uppercase;
+    padding: 60px 0 0 0;
+    letter-spacing: 2px;
+    text-shadow: 5px 4px 10px rgba(0, 0, 0, 0.53);
+
+}
+
+
+/* gallery */
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+
+/*Scroll button */
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+/*Button scroll top*/
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 28px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}
+
+</style>
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+<!-- video -->
+<div class="video-header wrap">
+    <div class="fullscreen-video-wrap">
+        <video src="{% static 'video/1.mp4' %}"  autoplay loop></video>
+    </div>
+    <div class="header-overlay">
+        <div class="header-content">
+            <img class="img-fluid" src="{% static 'img/home-logo-video.png' %}" alt="card image">
+              <a href="#" class="scroll-down" address="true"></a>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+             
+
+
+
+
+
+<section class="ok">
+</section>
+<div class="container">
+      <img src="{% static 'img/who_we_are.png' %}" alt="..." class="float-left pull-left mr-4">
+        <div class="text-1">Who we are</div>
+            <div class="text-2"> <br><br>Two words best describe the work that we do: Passion and Commitment. Our committed craftsmen will provide you with a professional work environment during the construction and maintenance of your project. Our ability to serve you will be seen by the results we deliver. Thank you for visiting our site - Jose "Uto" Dolores Henriquez, CEO.
+                  <br><br>
+                     <a href="{% url 'about' %}" class="btn btn-outline-success">View More</a>
+            </div>
+            
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+      <img src="{% static 'img/our_reviews.png' %}" alt="..." class="float-right pull-right ml-4">
+        <div class="text-1">our reviews</div>
+            <div class="text-2"> <br><br>Paul and his crew did a solid job! They take their time and make sure the customer is getting what they want.  We were very pleased with the efforts and final product that JDH Garden Services put forth.  The crew showed up on time and worked a full day.  All in all a good experience.  We anticipate using JDH on the next project!
+                <br><br>
+                 <a href="{% url 'testimonial' %}" class="btn btn-outline-success">View More</a>
+            </div>
+
+
+
+
+
+</div>
+
+<!-- Back to top button -->
+<a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+        <div class="container mt-40">
+             <div class="text-1">Our team</div>
+            <div class="row mt-30">
+                <div class="col-md-4 col-sm-6">
+                    <div class="box3">
+                        <img src="{% static 'img/worker1.jpg' %}">
+                        <div class="box-content">
+                            <h3 class="title">Olivia M.</h3>
+                            <span class="post">Skillled Landscaper</span>
+                            <p class="description">
+                                Enthusiastic and self-motivated.
+                            </p>
+                            <p class="description">
+                                oliviam@mostlyplants.com
+                                <br>
+                                +230 5905 9090
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="box3">
+                        <img src="{% static 'img/worker2.jpg' %}">
+                        <div class="box-content">
+                            <h3 class="title">Lewis H.</h3>
+                            <span class="post">Maintenance Labourer</span>
+                            <p class="description">
+                                Capable of hard physical work
+                            </p>
+                            <p class="description">
+                                lewish@mostlyplants.com
+                                <br>
+                                +230 5905 8080
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="box3">
+                        <img src="{% static 'img/worker3.jpg' %}">
+                        <div class="box-content">
+                            <h3 class="title">Megan P.</h3>
+                            <span class="post">Hard Landscaping Labourer</span>
+                            <p class="description">
+                                 Keen to learn new skills.
+                            </p>
+                            <p class="description">
+                                meganp@mostlyplants.com
+                                <br>
+                                +230 5905 7070
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<br><br><br><br><br><br><br>
+
+
+<div class="parallax-bottom-part">
+  <p>We dont cramp your style but your weeds</p>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+ <div class="text-1">our Gallery</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery1.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery1.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery2.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery2.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery3.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery3.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{% static 'img/gallery/gallery4.jpg' %}"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="{% static 'img/gallery/gallery4.jpg' %}"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="text-2">
+<a href="{% url 'gallery' %}" class="btn btn-outline-success">View More</a>
+</div>
+
+
+<br><br><br>
+
+<!-- Scroll top button-->
+<script>
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+</script>
+
+
+
+<!-- Scroll down button-->
+<script>
+ $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
+</script>
+
+
+
+
+<!-- Parallax Scrolling -->
+<script type="text/javascript">
+  $(window).scroll(function(){
+   var sPos = $(this).scrollTop();
+   $(".zooming-bg").css({
+     'background-size' : 100+sPos + '%'
+   });
+  });
+</script>
+
+
+<!--Gallery script -->
+<script>
+let modalId = $('#image-gallery');
+
+$(document)
+  .ready(function () {
+
+    loadGallery(true, 'a.thumbnail');
+
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current) {
+      $('#show-previous-image, #show-next-image')
+        .show();
+      if (counter_max === counter_current) {
+        $('#show-next-image')
+          .hide();
+      } else if (counter_current === 1) {
+        $('#show-previous-image')
+          .hide();
+      }
+    }
+
+
+    function loadGallery(setIDs, setClickAttr) {
+      let current_image,
+        selector,
+        counter = 0;
+
+      $('#show-next-image, #show-previous-image')
+        .click(function () {
+          if ($(this)
+            .attr('id') === 'show-previous-image') {
+            current_image--;
+          } else {
+            current_image++;
+          }
+
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+        });
+
+      function updateGallery(selector) {
+        let $sel = selector;
+        current_image = $sel.data('image-id');
+        $('#image-gallery-title')
+          .text($sel.data('title'));
+        $('#image-gallery-image')
+          .attr('src', $sel.data('image'));
+        disableButtons(counter, $sel.data('image-id'));
+      }
+
+      if (setIDs == true) {
+        $('[data-image-id]')
+          .each(function () {
+            counter++;
+            $(this)
+              .attr('data-image-id', counter);
+          });
+      }
+      $(setClickAttr)
+        .on('click', function () {
+          updateGallery($(this));
+        });
+    }
+  });
+
+// build key actions
+$(document)
+  .keydown(function (e) {
+    switch (e.which) {
+      case 37: // left
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+          $('#show-previous-image')
+            .click();
+        }
+        break;
+
+      case 39: // right
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+          $('#show-next-image')
+            .click();
+        }
+        break;
+
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
+</script>
+
+
+{% endblock %}
+
